@@ -17,7 +17,7 @@
 namespace kebbet\taxonomy\author;
 
 const TAXONOMY   = 'author-tag';
-const POST_TYPES = array( 'explore' );
+const POST_TYPES = array( 'post' );
 const HIDE_SLUG  = false;
 
 /**
