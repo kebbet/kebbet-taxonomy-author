@@ -3,7 +3,7 @@
  * Plugin Name:       Kebbet plugins - custom taxonomy: author
  * Plugin URI:        https://github.com/kebbet/kebbet-taxonomy-author
  * Description:       Register the custom taxonomy author
- * Version:           20211111.01
+ * Version:           1.0.1.car
  * Author:            Erik Betshammar
  * Author URI:        https://verkan.se
  * Requires at least: 5.7
@@ -55,9 +55,9 @@ function load_textdomain() {
 function register() {
 
 	$tax_labels = array(
-		'name'                       => _x( 'Authors', 'taxonomy general name', 'kebbet-taxonomy-author' ),
-		'menu_name'                  => __( 'Authors', 'kebbet-taxonomy-author' ),
-		'singular_name'              => _x( 'Author', 'taxonomy singular name', 'kebbet-taxonomy-author' ),
+		'name'                       => _x( 'Author tags', 'taxonomy general name', 'kebbet-taxonomy-author' ),
+		'menu_name'                  => __( 'Author tags', 'kebbet-taxonomy-author' ),
+		'singular_name'              => _x( 'Author tag', 'taxonomy singular name', 'kebbet-taxonomy-author' ),
 		'all_items'                  => __( 'All author tags', 'kebbet-taxonomy-author' ),
 		'edit_item'                  => __( 'Edit tag', 'kebbet-taxonomy-author' ),
 		'view_item'                  => __( 'View tag', 'kebbet-taxonomy-author' ),
@@ -72,10 +72,10 @@ function register() {
 		'popular_items'              => __( 'Popular tags', 'kebbet-taxonomy-author' ),
 		'parent_item'                => __( 'Parent tag', 'kebbet-taxonomy-author' ),
 		'parent_item_colon'          => __( 'Parent tag:', 'kebbet-taxonomy-author' ),
-		'back_to_items'              => __( '&larr; Back to tags', 'kebbet-taxonomy-author' ),
+		'back_to_items'              => __( '&larr; Back to author tags', 'kebbet-taxonomy-author' ),
 		'name_field_description'     => __( 'The name is how it appears on the website and in the user interface.', 'kebbet-taxonomy-author' ),
 		'slug_field_description'     => __( 'The &#8220;slug&#8221; is a sanitized version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens. Do not change if not needed.', 'kebbet-taxonomy-author' ),
-		'desc_field_description'     => __( 'The description is not used for Dansehallerne.', 'kebbet-taxonomy-author' ),
+		'desc_field_description'     => __( 'The description is not used or displayed.', 'kebbet-taxonomy-author' ),
 	);
 
 	$capabilities = array(
@@ -97,7 +97,7 @@ function register() {
 		'query_var'             => false,
 		'show_in_rest'          => true,
 		'rewrite'               => false,
-		'description'           => __( 'Author tag.', 'kebbet-taxonomy-author' ),
+		'description'           => __( 'Author tags.', 'kebbet-taxonomy-author' ),
 	);
 
 	register_taxonomy( TAXONOMY, POST_TYPES, $tax_args );
